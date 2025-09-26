@@ -23,13 +23,26 @@
         <li  class="class">two </li>
         <li class="class">three</li>
     </ul>
-   
+    <div></div>
+   <audio id="Ad" src="Thala.mp3"></audio>
     
     <button id="cl">clickme
     </button>
 
-    <script src="js.js">
-        
+    <script src="js.js"></script>
+     <script>
+         var audio= document.createElement('audio');
+        let ADD = document.getElementById('Ad');
+        let btn=document.getElementById('cl');
+        btn.addEventListener('click',function(){
+            ADD.play();
+        })
+  const add =document.body.appendChild("div");
+        // const add= document.querySelector("div");
+let neww = document.createElement("h1");
+        neww.textContent:"new paraagrasf created";
+add.appendChild(neww);
+     </script>
     </script>
 </body>
 </html>

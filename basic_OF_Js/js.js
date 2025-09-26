@@ -107,11 +107,11 @@
 /// how to print different type of date format e
 
 let currentdte= new Date();
-console.log(currentdte);
-console.log(currentdte.toDateString());
-console.log(currentdte.toString());
-console.log(currentdte.toJSON());
-console.log(currentdte.toLocaleString());
+// console.log(currentdte);
+// console.log(currentdte.toDateString());
+// console.log(currentdte.toString());
+// console.log(currentdte.toJSON());
+// console.log(currentdte.toLocaleString());
 
 // to declare now date
 let nowdate= Date.now();
@@ -123,9 +123,9 @@ let num1="hdsf4546";
 console.log(typeof num);
 console.log(num)
 let type=Number(num)  // by add Number it can change the string to num
-console.log(typeof type);
-console.log(Number(num1));
-console.log(typeof num1);
+// console.log(typeof type);
+// console.log(Number(num1));
+// console.log(typeof num1);
 
     //but if we want to convert ("354vcnv")this type of data to Number then it give NaN.....
 
@@ -134,9 +134,9 @@ console.log(typeof num1);
     //Array operation 
     let arr=[1,2,3,4,5];
     arr.push(6)// this push add the element in the last 
-    console.log(arr);
+   // console.log(arr);
     arr.pop(6);// tthis will remove the element from last 
-    console.log(arr);
+    //console.log(arr);
 
     // concat == it add two string and return a new string so it will store in new string 
 
@@ -156,7 +156,7 @@ console.log(typeof num1);
       const newnum=numbers.filter((num)=>{
          return num>4;
       })
-      console.log(newnum);
+     // console.log(newnum);
 
 
       // similar like (for each) there is an another method call map ()this will also a call back function which return the values 
@@ -164,19 +164,61 @@ console.log(typeof num1);
       arr2=arr2.map((nu)=>{
          return nu+10;
       })
-      console.log(arr2);
+           //  console.log(arr2);
 //
 
 //  settimeout function .......
       const settime=setTimeout(function(){
          document.querySelector('#title').innerHTML="change the tex"
       },3000);
-      console.log(settime);
+     // console.log(settime);
   
       // by using this cleartimeout function we can stopped any function jispe settimeout function lga hua h 
 /// systex of cleartimeout ---document.
 // ('button').addeventlistner('click",function(){cleartimeout(gave the function of settimreout)})
        document.querySelector('#cl').addEventListener( 'click',function(){
             clearTimeout(settime)
-console.log("stooped")
+//console.log("stooped")
        })
+
+
+       ///  .................  iff  function to immidoate call syntex_+++====  ()()1st one is for assigning a function 2nd one is for passing value
+(function chai(name){console.log(`${name}`)})( "nikhil");// here {; }this is important to stop it 
+
+
+
+/// DOM manupulation
+document.getElementById('title').getAttribute('class');// it will return the class name of the
+
+// if we appli queryselctor then it will return the Nodelist not the array and in naode list maps are not present 
+// to make the nodelist to array we use Array.from
+
+let list= document.querySelectorAll('.item');
+// console.log(list);
+let arry=Array.from(list);
+//console.log(arry);// now this will convert into a array
+
+
+
+
+
+
+// how to play audio in js
+var audio= document.createElement('audio');
+audio.setAttribute('src','Thala.mp3')
+audio.loop=true;
+audio.play();
+  // 2nd way to play audio on button click
+//  var audio= document.createElement('audio');
+//         let ADD = document.getElementById('Ad');
+//         let btn=document.getElementById('cl');
+//         btn.addEventListener('click',function(){
+//             ADD.play();
+//         })
+
+
+// appendchild....
+const add= document.createElement("div");
+let neww = document.createElement("h1");
+package.innerHTML="new paraagrasf created";
+add.appendChild(neww);
