@@ -58,3 +58,66 @@ console.log(arr);
 
 
 
+const product=[
+    {name:'laptop',
+        price:500,
+        iteam:2
+        
+    },
+    {name:'tv',
+        price:300,
+        iteam:5
+        
+    },
+    {name:'telephone',
+        price:50,
+        iteam:9
+        
+    }
+    
+]
+
+const price=product.map(iteam=>({
+      total:iteam.price*iteam.iteam,
+      name:iteam.name
+}))
+console.log(price);
+
+
+// filter method
+ // this method is use to filter the value on the basis of condition
+ // we can use it on array of object also
+ const number1=[1,2,3,4,5,6,];
+
+ const enennum=(number1.filter(even));
+ function even(iteam){
+    return iteam%2==0;
+ }
+ console.log(enennum)
+ //more example
+ const products=[
+    {
+    name:'laptop',
+    price:34546,
+    iteam:412
+ },
+    {
+    name:'yd',
+    price:34566,
+    iteam:43
+ },
+    {
+    name:'laptop',
+    price:36446,
+    iteam:42
+ },
+]
+
+ const costofproduct=(products.filter(sumofproduct));
+
+ function sumofproduct(iteam){
+    return iteam.price>1000;
+ }
+ console.log(costofproduct);//print all the product whose price is greater than 1000
+
+ 
